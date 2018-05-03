@@ -1,4 +1,22 @@
-﻿#include <stdio.h>
+﻿/** @file  momyu.c
+ *  @brief Simulator of momularimi
+ *
+ *  This software is a simulator of momularimi
+ *  and outputs momularimi's tweets according to specified options.
+ *
+ *  @author    0x2fff
+ *  @version   1.0
+ *  @par       History
+ *             2018-05-03 | 0x2fff | Create new.
+ *  @bug
+ *  @attention
+ *  @warning
+ *  @remarks
+ *  @note
+ *  @todo
+ */
+
+#include <stdio.h>
 #if defined(__GNUC__)
 #include <unistd.h>
 #elif defined(_MSC_VER)
@@ -8,6 +26,7 @@
 errorimi
 #endif
 
+/** Translation table that converts options to momularimi's tweets. */
 const char *moption2momutput[] = {
     "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
     "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
@@ -49,6 +68,14 @@ const char *moption2momutput[] = {
     /* y */ "",
     /* z */ ""};
 
+/**
+ * @brief  Main function
+ * @param  argc An integer argument count of the command line arguments
+ * @param  argv An argument vector of the command line arguments
+ * @return An integer 0 upon exit success
+ * @pre 
+ * @post
+ */
 int main(int argc, char *argv[])
 {
     int c, i, m;
